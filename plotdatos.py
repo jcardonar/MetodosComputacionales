@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pylab as plt
 
+#Grafica de datos.dat
 
 datos=np.genfromtxt("datos.dat")
 
