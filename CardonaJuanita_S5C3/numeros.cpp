@@ -10,12 +10,10 @@ int main()
 	int i, numeroal;
 	for(i=0;i<1000;i++)
 	{
-		numeroal = rand() % 100 + 1;
-		cout << i << " " << numeroal << endl;  	 	 
+		numeroal = rand() % 100 + 1; 	 	 
+		res = pares(numeroal);
+		cout<<res<<endl;	
 	}
-	res = pares(i);
-	cout<<res<<endl;	
-
 	return 0;
 }
 
