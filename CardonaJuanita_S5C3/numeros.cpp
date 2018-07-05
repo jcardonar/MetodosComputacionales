@@ -10,10 +10,10 @@ int main()
 	int i, numeroal;
 	for(i=0;i<1000;i++)
 	{
-		numeroal = rand() % 100 + 1; 	 	 
+		numeroal = rand() % 100 + 1; 	 	 	
 		res = pares(numeroal);
-		cout<<res<<endl;	
-	}
+		cout<<res<<endl;
+	}	
 	return 0;
 }
 
@@ -22,14 +22,15 @@ int pares(int num1)
 	int contador = 0;
 	for(int num1; num1<89; num1++)
 	{
-		while(num1%2 == 0 && contador < 25)
+		if(num1%2 == 0 && contador < 25 && num1<89)
 		{
 		contador += 1;
 		return num1;
-			if(contador == 25)
-			{
-				break;
-			}
 		}
+		else if(contador == 25)
+		{
+			break;
+		}
+		
 	}
 }
