@@ -42,10 +42,10 @@ int main()
 		for(int i =1; i<nx; i++)
 		{
 			float a = U_p[i] - U_p[i-1];
-			U_f[j+1] = U_p[i] + cte*a;
-		
+			U_f[i] = U_p[i] + cte*a;
+
 		}
-		cout<<U_f[j]<<endl;
+		
 	}
 	return 0;
 }
