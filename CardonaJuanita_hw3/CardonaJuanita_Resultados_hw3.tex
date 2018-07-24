@@ -1,0 +1,102 @@
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+% Formato para los talleres del curso de Métodos Computacionales
+% Universidad de los Andes
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos} % Para poner una imagen en posiciones arbitrarias
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{hyperref}
+%\decimalpoint
+
+\begin{document}
+\begin{center}
+{\Large Gráficas de la tarea 3 } \\
+Juanita Cardona Rocha- \textsc{201610998}\\
+\end{center}
+
+
+\noindent
+\section{Gráficas del primer punto}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{MovPart.png}
+	\caption{Movimiento de la particula en el campo}
+\end{figure}
+
+Esta es una gráfica del movimiento de la partícula en un campo magnético uniforme. A partir de las condiciones iniciales, se obtuvo los datos del movimiento en las direcciones de $\hat{i}$ y de $\hat{j}$ con el método de Leap Frog. Como el campo se encontraba en la dirección $\hat{k}$, la particula se iba a mover de manera helicoidal alrededor del eje \textit{z}. Por lo tanto, teniendo en cuenta que la velocidad era constante en esta dirección, se utilizó la fórmula de $z(t) = v_{z}t$ para encontrar el movimiento en el eje \textit{z}. Se puede ver que el método utilizado es apropiado debido a que la gráfica obtenida demuestra el comportamiento teorico de la partícula en el campo.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{MovXY.png}
+	\caption{Movimiento de la particula en \textit{x} respecto a \textit{y}}
+\end{figure}
+
+La figura 2 demuestra el movimiento de la partícula en la dirección $\hat{i}$ y en la dirección $\hat{j}$. Se puede observar que este movimiento forma un círculo, lo cual es de esperarse teniendo en cuenta que la fuerza del campo magnético sobre la partícula $\vec{F} = q\vec{v}\times \vec{B}$ hace que ésta haga dichos circulos alrededor de la dirección del campo. El movimiento helicoidal de la figura 1 es el resultado de este movimiento circular a medida que se avanza en el eje \textit{z}.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{MovXZ.png}
+	\caption{Movimiento de la particula en el eje \textit{x} con el eje \textit{z}}
+\end{figure}
+
+La figura 3 muestra el movimiento oscilatorio de la partícula respecto a la dirección del campo. A medida que la partícula se mueve alrededor del campo, éste hace que la dirección del movimiento cambie constantemente. Uniendo tanto el movimiento oscilatorio en \textit{x} y en \textit{y}, se tiene el círculo de la figura 2.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{YT.png}
+	\caption{Movimiento de la particula en el tiempo}
+\end{figure}
+
+Lo último de este punto es analizar el movimiento de la partícula a través del tiempo. Se puede ver que la particula oscila, sea en la dirección $\hat{i}$ o $\hat{j}$ por la fuerza que el campo ejerce en ella. Sin fuerzas externas, este movimiento es constante y por esto se ve que la amplitud de las oscilaciones no cambia.
+
+\section{Gráficas del segundo punto}
+Para esto punto se analizó la ecuación de onda en dos dimensiones $\frac{\partial \Phi(t,x,y)^2}{\partial t^2} = c^2\Big(\frac{\partial \Phi(t,x,y)^2}{\partial x^2} + \frac{\partial \Phi(t,x,y)^2}{\partial y^2}\Big)$ en la membrana de tambor. Para esto se utilizó el método de diferencia finitas, y junto con las condiciones iniciales se encontraron los parámetros necesarios para resolver la ecuación. Las condiciones iniciales de esta membrana se ven en la figura 5.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{TambIn.png}
+	\caption{Condiciones iniciales de la membrana}
+\end{figure}
+
+Como se puede ver, hay una perturbación aproximadamente en la mitad de la membrana. Se espera que esta perturbación se propague alrededor de la membrana. Esta propagación depende de si las fronteras se encuentran fijas o libres. Para hacer este analisis se hizo una gráfica de la membrana en \textit{t = 60 ms} con las fronteras fijas y libres, como se puede ver en las figuras 6 y 7 respectivamente. Con las fronteras fijas, la membrana mantiene los mismos valores en los bordes mientras que con la frontera libre la derivada en los bordes tiene un valor de cero.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{TambFij.png}
+	\caption{Membrana a los 60 ms con frontera fija}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{TambLib.png}
+	\caption{Membrana a los 60 ms con frontera fija}
+\end{figure}
+
+Se puede observar que el movimiento con las fronteras libres es mucho más desorganizado que con las fronteras fijas. También se puede ver que el pico incial se transmite a través de varios picos en la membrana, mientras que con los bordes fijos se tiene un mínimo significativo. Esto se debe a que el movimiento no se puede transmitir por los bordes y probablemente al llegar a estos puntos se refleja, formando máximos y mínimos según los armónicos que se encuentren alrededor de la longitud del tambor. Esto se puede comprobar haciendo un corte transversal a través de la mitad de la longitud de la membrana y gráficar las amplitudes de la onda respecto al tiempo, como se puede ver en las figuras 8 y 9.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{CortFij.png}
+	\caption{Corte transversal en la membrana con condiciones de frontera fijas}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{CortLib.png}
+	\caption{Corte transversal en la membrana con condiciones de frontera libres}
+\end{figure}
+Las figuras de los cortes transversales demuestran lo deducido a partir de las gráficas de las membrana con ambas condiciones de frontera en \textit{t = 60 ms}. En el caso de la membrana fija, se puede ver que hay una disminución de la amplitud de las oscilaciones hasta llegar a un mínimo, del cual se vuelve a ascender hasta un máximo. Este es el comportamiento esperado de una onda propagandose en un medio y las fronteras fijas permiten que este movimiento se encuentre de forma ordenada. Mientras tanto en la imagen 9 se tiene el corte de la membrana libre, donde se puede observar que la onda tiene máximos y mínimos sin ningún patrón evidente a simple vista. Esto demuestra que en este caso la onda se propaga desordenadamente y hay una variación de su amplitud importante. Por lo tanto se puede concluir que el método de diferencias finitas se aplico correctamente para resolver la ecuación de onda de una membrana, debido a que los resultados obtenidos se acoplan a lo esperado de esta situación. 
+
+\end{document}
+\grid
+\grid
